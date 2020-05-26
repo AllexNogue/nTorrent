@@ -12,7 +12,7 @@ const url = urlParse(torrent.announce.toString('utf8'));
 
 const socket = dgram.createSocket('udp4');
 
-const myMsg = Buffer.from('Oi maçã?', 'utf8');
+const myMsg = Buffer.from('hello?', 'utf8');
 
 socket.send(myMsg, 0, myMsg.length, url.port, url.host, () => {});
 
