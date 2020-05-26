@@ -6,7 +6,7 @@ const torrentParser = require('./torrent-parser');
 
 const u8 = 'utf8';
 
-const torrent = bencode.decode(fs.readFileSync('torrent.torrent'));
+const torrent = torrentParser.open('torrent.torrent');
 
 tracker.getPeers(torrent, peers => {
     console.log('lis of peers: ', peers);
