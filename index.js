@@ -5,6 +5,6 @@ const bencode = require('bencode');
 const u8 = 'utf8';
 
 const torrent = bencode.decode(fs.readFileSync('torrent.torrent'));
-// const trackerUrl = torrent.announce.toString(u8)
+const trackerUrl = torrent.announce.toString(u8)
 
-console.log(torrent)
+console.log(trackerUrl)
